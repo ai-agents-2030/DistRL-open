@@ -5,7 +5,7 @@
 <h3 align="center">
 DistRL: An Asynchronous Distributed Reinforcement Learning Framework for On-Device Control Agents
 <br>
-<b>FITML @ NeurIPS 2024</b>
+<b>ICLR 2025</b>
     <br>
 
 </h3>

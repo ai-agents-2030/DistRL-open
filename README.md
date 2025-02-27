@@ -122,6 +122,8 @@ Setup Steps:
    - Follow the [Environment Setup Guide](./env_setup.md) to configure the environment for Android emulator.
 
 4. Test the Setup:
+   - Set the configurations in the files `multimachine/default.yaml` and `multimachine/worker.yaml`.
+   - Download the host policy files from [here](https://drive.google.com/drive/folders/1zVnhTs-P_3uj3f44rHF3XZATKVSVy1kl?usp=sharing) and unzip into the worker's `save_path` defined in the config file `multimachine/worker.yaml`, default as `/home/<usrname>/logs/worker`.
    - Run the `run.py` script with the worker configuration to test:
 
     ```bash

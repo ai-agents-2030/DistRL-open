@@ -445,6 +445,7 @@ def offpolicy_train_loop(agent,
 
                     print(">>> Saving Replay Buffer")
                     torch.save(replay_buffer, os.path.join(save_path, 'replay_buffer.pt'))
+                    torch.save(validation_buffer, os.path.join(save_path, 'validation_buffer.pt'))
                     torch.save(all_trajectories, os.path.join(save_path, 'trajectories.pt'))
                     torch.save(train_trajectories, os.path.join(save_path, 'train_trajectories.pt'))
                     torch.save(val_trajectories, os.path.join(save_path, 'val_trajectories.pt'))
@@ -457,6 +458,7 @@ def offpolicy_train_loop(agent,
             buffer_update = broadcast(buffer_update)
             if buffer_update:
                 replay_buffer = torch.load(os.path.join(save_path, 'replay_buffer.pt'), weights_only=False)
+                validation_buffer = torch.load(os.path.join(save_path, 'validation_buffer.pt'), weights_only=False)
                 all_trajectories = torch.load(os.path.join(save_path, 'trajectories.pt'), weights_only=False)
                 train_trajectories = torch.load(os.path.join(save_path, 'train_trajectories.pt'), weights_only=False)
                 val_trajectories = torch.load(os.path.join(save_path, 'val_trajectories.pt'), weights_only=False)
@@ -486,6 +488,7 @@ def offpolicy_train_loop(agent,
                 print(">>> Saving")
                 trainer.save(os.path.join(save_path, 'trainer.pt'))
                 torch.save(replay_buffer, os.path.join(save_path, 'replay_buffer.pt'))
+                torch.save(validation_buffer, os.path.join(save_path, 'validation_buffer.pt'))
                 torch.save(all_trajectories, os.path.join(save_path, 'trajectories.pt'))
                 torch.save(train_trajectories, os.path.join(save_path, 'train_trajectories.pt'))
                 torch.save(val_trajectories, os.path.join(save_path, 'val_trajectories.pt'))

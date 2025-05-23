@@ -100,6 +100,13 @@ unzip android_30.zip
 
 Download the `adbkey` [here](https://drive.google.com/drive/folders/1HzLPB2X2oXTaYKOuOji_3VDqfHhUfYX7?usp=sharing) to `$ANDROID_HOME`.
 
+If you previously had an `adbkey` and updated it, make sure to restart the adb server:
+
+```bash
+adb kill-server
+adb start-server
+```
+
 You have now successfully copied the AVD based on android-30 that we used for our research.
 
 ### KVM Acceleration
